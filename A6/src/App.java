@@ -1,6 +1,7 @@
 // A6 Variable Basics
 // Karthik Raghavun
 // 19 September 2024
+// Calculating how many chicken wings the user can buy with $4.75. 
 
 public class App {
     public static void main(String[] args) throws Exception {
