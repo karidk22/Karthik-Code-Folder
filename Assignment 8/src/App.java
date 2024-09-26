@@ -1,3 +1,10 @@
+// Assignment 8
+// Karthik Raghavun
+// 25 September 2024
+// Using scanner keys. Asks for user inputs and does basic addition
+
+
+
 import java.util.Scanner;
 
 public class App {
