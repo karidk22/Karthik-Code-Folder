@@ -7,7 +7,7 @@ public class BigorSmallClass {
         }
 
         if (a < b){
-            System.out.println("No " + a + " is not greater than " + b);
+            System.out.println("No, " + a + " is not greater than " + b);
         }
 
         if (a == b){
