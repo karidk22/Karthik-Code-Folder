@@ -7,5 +7,7 @@ public class App {
         Functions temp = new Functions();
         temp.cTof(10);
         temp.fToc(50);
+        temp.cTof(5);
+        temp.fToc(23);
     }
 }
