@@ -9,19 +9,21 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the triangle calculator!");
-        System.out.println("Please enter the length of side a: ");
-        int a = scanner.nextInt();
-        System.out.println("Please enter the length of side b: ");
-        int b = scanner.nextInt();
-        System.out.println("Please enter the length of side c: ");
-        int c = scanner.nextInt();
 
-        double Perimeter = a + b + c;
-        System.out.println("The perimter of the triangle is " + Perimeter);
+        System.out.println("Please enter the length of side A: ");
+        int sideA = scanner.nextInt();
+        System.out.println("Please enter the length of side B: ");
+        int sideB = scanner.nextInt();
+        System.out.println("Please enter the length of side C: ");
+        int sideC = scanner.nextInt();
 
-        double s = Perimeter / 2;
-        double Area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
-        System.out.println("The area of the triangle is " + Math.round(Area));
+        Triangle triangle = new Triangle(sideA, sideB, sideC);
+
+        double perimeter = triangle.triPerm();
+        double area = triangle.triArea();
+
+        System.out.println("The perimeter of the triangle is: " + perimeter);
+        System.out.println("The area of the triangle is: " + area);
 
 
     }
