@@ -17,5 +17,5 @@ public class Triangle {
         double area = triPerm() / 2;
         return Math.sqrt(area * (area - sideA) * (area - sideB) * (area - sideC));
     }
-
+    
 }
