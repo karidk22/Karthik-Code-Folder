@@ -1,3 +1,7 @@
+// Assignment 22
+// Karthik Raghavun
+// 25 October 2024
+// Checking if a given year by the user is a leap year. 
 import java.util.Scanner;
 
 public class App {
