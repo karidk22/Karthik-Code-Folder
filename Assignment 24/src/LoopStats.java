@@ -1,51 +1,59 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name
 
-import java.util.Scanner;
 
 public class LoopStats {
-	private int start, stop, beg, end;
-	Scanner scanner = new Scanner(System.in);
+	private int start, stop;
+
+	public LoopStats() {
+		start = 0;
+		stop = 0; 
+	}
 
 	public LoopStats(int beg, int end) {
+		setNums(beg, end);
 	}
 
 	public void setNums(int beg, int end) {
-		System.out.println("Please enter a beginning number: ");
-		beg = scanner.nextInt();
-		System.out.println("Please enter an ending number: ");
-		end = scanner.nextInt();
+		start = beg;
+		stop = end;
+
 
 	}
 
 	public int getEvenCount() {
-
-		int evenCount=0;
-		while (start % beg == 0 && start % end == 0) {
-			evenCount++;
+		int evenCount = 0;
+		for (int i = start; i <= stop; i++) {
+			if (i % 2 == 0) {
+				evenCount++;
+			}
 		}
+		
 		return evenCount;
 	}
 
 	public int getOddCount() {
-
-		int oddCount=0;
-		while (stop % beg == 1 && stop % end == 1) {
-			oddCount++;
+		int oddCount = 0;
+		for (int i = start; i <= stop; i++) {
+			if (i % 2 != 0) {
+				oddCount++;
+			}
 		}
+
 		return oddCount;
 	}
 
 	public int getTotal() {
-		int total=0;
-		while (total < stop) {
+		int total = 0;
+		for (int i = start; i <= stop; i++) {
 			total++;
 		}
+		
 		return total;
 	}
 	
 	public String toString() {
-		return start + " " + stop;
+		return "Range: " + start + " to " + stop + "\n" + 
+		"Total Sum: " + getTotal() + "\n" + 
+		"Even Numbers: " + getEvenCount() + "\n" + 
+		"Odd Numbers: " + getOddCount();
 	}
 }
