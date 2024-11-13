@@ -1,11 +1,9 @@
-
-
 public class LoopStats {
 	private int start, stop;
 
 	public LoopStats() {
 		start = 0;
-		stop = 0; 
+		stop = 0;
 	}
 
 	public LoopStats(int beg, int end) {
@@ -15,8 +13,6 @@ public class LoopStats {
 	public void setNums(int beg, int end) {
 		start = beg;
 		stop = end;
-
-
 	}
 
 	public int getEvenCount() {
@@ -26,7 +22,6 @@ public class LoopStats {
 				evenCount++;
 			}
 		}
-		
 		return evenCount;
 	}
 
@@ -37,23 +32,23 @@ public class LoopStats {
 				oddCount++;
 			}
 		}
-
 		return oddCount;
 	}
 
 	public int getTotal() {
 		int total = 0;
 		for (int i = start; i <= stop; i++) {
-			total++;
+			total = total + i;
 		}
-		
 		return total;
 	}
-	
-	public String toString() {
-		return "Range: " + start + " to " + stop + "\n" + 
-		"Total Sum: " + getTotal() + "\n" + 
-		"Even Numbers: " + getEvenCount() + "\n" + 
-		"Odd Numbers: " + getOddCount();
+
+	public void Print() {
+		System.out.println("Even Count: " + getEvenCount());
+		System.out.println("Odd Count: " + getOddCount());
+		System.out.println("Total: " + getTotal());
 	}
+
+	
+
 }
