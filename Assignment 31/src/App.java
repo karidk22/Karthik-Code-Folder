@@ -30,7 +30,7 @@ public class App {
 	// ARRAY NUMBER TWO ----------------------------------------
 		int[] two = {4,2,3,4,6,7,8,9,0,10,0,1,7,6,5,3,2,9,9,8,7};
 
-        System.out.println("\n");
+		System.out.println("\n");
         System.out.println(Arrays.toString(two));
         System.out.println("Sum of spots 3-6 = " + getSum(two, 3, 6));
         System.out.println("Sum of spots 2-9 = " + getSum(two, 2, 9));
