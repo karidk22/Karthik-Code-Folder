@@ -9,7 +9,7 @@ import java.lang.Math;
 public class App {
 	public static void main( String args[] ) {
 	// ARRAY NUMBER 1 ----------------------------------------
-		int[] one = {4,10,0,1,7,6,5,3,2,9};
+		int[] one = {7, 4, 10, 0, 1, 7, 6, 5, 3, 2, 9, 7};
 
 		// Print the array for the user to view
 		System.out.println(Arrays.toString(one));
@@ -28,7 +28,7 @@ public class App {
 
 
 	// ARRAY NUMBER TWO ----------------------------------------
-		int[] two = {4,2,3,4,6,7,8,9,0,10,0,1,7,6,5,3,2,9,9,8,7};
+		int[] two = {7, 4, 2, 7, 3, 4, 6, 7, 8, 9, 7, 0, 10, 7, 0, 1, 7, 6, 5, 7, 3, 2, 7, 9, 9, 8,7};
 
 		System.out.println("\n");
         System.out.println(Arrays.toString(two));
