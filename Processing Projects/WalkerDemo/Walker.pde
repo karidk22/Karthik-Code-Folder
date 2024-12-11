@@ -1,41 +1,51 @@
 class Walker {
-    int x, y; // Position Variables 
+    int x, y; //Position Variables
     int size;
     int speed;
+    int cr, cg, cb;
+    boolean npc; //Is this a computer
 
-    // Constructer
-    Walker(int tempx, int tempy) {
+    //Constructor
+    Walker(int tempx, int tempy, boolean tempnpc) {
         x = tempx;
         y = tempy;
         size = 25;
-        speed = 25;
+        speed = 5;
+        npc = tempnpc; // If true, automate!
+        cr = (int) random(0,255);
+        cg = (int) random(0,255);
+        cb = (int) random(0,255);
     }
 
     void display() {
-        fill(0);
-        // rect(xpos, ypos, width, height)
-        rect(x, y, size, size);
-
+        fill(cr, cg, cb);
+        //rect(xpos, ypos, width, height)
+        rect(x, y, size, size); 
     }
 
-    // dir 0 = up, dir 1 = right, dir 2 = down, dir 3 = left
+    // dir var --> 0 = up, 1 = right, 2 = down, 3 = left
     void move(int dir) {
-        // Move up
-        if (dir == 0) { 
+
+        //Computer Movement Randomizer
+        if (npc) {
+            dir = (int) random(0,3);
+        }
+
+        //move Up
+        if (dir == 0 && y > 0) {
             y = y - speed;
         }
-        // Move right
-        else if (dir == 1) {
+        //move right
+        else if (dir == 1 && x < 1500) {
             x = x + speed;
         }
-        // Move down
-        else if (dir == 2) {
+        //move down
+        else if (dir == 2 && y < 700) {
             y = y + speed;
         }
-        // Move left
-        else if (dir == 3) {
+        //move left
+        else if (dir == 3 && x > 0) {
             x = x - speed;
-            
         }
     }
 
