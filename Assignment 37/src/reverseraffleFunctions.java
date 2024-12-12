@@ -1,17 +1,15 @@
 import java.util.*;
 public class reverseraffleFunctions {
-    String[] list1 = {"Rey", "Ryan", "Kadyn", "Isaiah", "Alessandra", "Ana", "Keshawn", "Caylee", "Diamond", "Wesley"};
-    List<String> list1Names = new ArrayList<String>();
+    String[] list1 = new String[] {"Joe", "Bob", "George", "Sarah", "Emily", "Mark", "Srinivasan", "Balasubramanium", "Kartikeyan", "Bharat"};
 
     // Create a function that picks 9 names out of the list 
-    public void namePicker() { 
-        // Code a way that it pick 9 random people out of the list 
-        for (int i = 0; i <= 10; i++) {
-            list1Names.remove(i);
-            System.out.println(list1);
-        }
+    public void namePicker() {
+        System.out.println("Names: " + Arrays.toString(list1));
+        Random r = new Random();
+        int names = r.nextInt(list1.length);
+        System.out.println("Winner: " + list1[names]);
+        System.out.println("Losers: " );
+    }
         
         // Code that returns the winner of the draw
-    }
-    
 }
